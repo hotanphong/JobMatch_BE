@@ -32,5 +32,5 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
             cd JobMatchBE
-            sudo docker pull hophong0310/nestjs-api:latest
-            sudo docker compose up -d
+            docker pull hophong0310/nestjs-api:latest
+            docker compose up -d
