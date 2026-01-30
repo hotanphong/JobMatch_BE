@@ -3,7 +3,7 @@ FROM node:20-alpine AS builder
 
 WORKDIR /app
 
-COPY package*.json ./
+COPY package*.json yarn.lock ./
 
 RUN yarn install --frozen-lockfile
 
@@ -16,7 +16,7 @@ FROM node:20-alpine
 
 WORKDIR /app
 
-COPY package.json yarn.lock ./
+COPY package*.json yarn.lock ./
 
 RUN yarn install --frozen-lockfile --production && yarn cache clean
 
